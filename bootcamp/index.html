@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Frontiers in Language Model Systems & Algorithms — Bootcamp</title>
+    <meta name="description" content="A week-long bootcamp on frontier-scale language model systems and algorithms. Hosted by GPU MODE × Scale ML." />
+    <link rel="icon" href="/logo.png" />
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #111213;
+        --muted: #6b7280;
+        --primary: #0f172a;
+        --accent: #f59e0b; /* ⚡ */
+        --card: #f3f4f6;
+        --border: #e5e7eb;
+        --maxw: 1100px;
+        --radius: 14px;
+      }
+      html, body {
+        background: var(--bg);
+        color: var(--text);
+        margin: 0;
+        font-family: ui-sans-serif, -apple-system, system-ui, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji;
+        line-height: 1.5;
+      }
+      .container {
+        max-width: var(--maxw);
+        padding: 28px 20px 80px;
+        margin: 0 auto;
+      }
+      header h1 {
+        font-size: 34px;
+        letter-spacing: 0.2px;
+        margin: 6px 0 22px;
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 28px;
+        align-items: start;
+      }
+      .card {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 18px 18px;
+      }
+      .desc p {
+        margin: 0;
+        font-size: 18px;
+      }
+      .hosted-by h3 {
+        margin: 0 0 10px;
+        font-weight: 600;
+      }
+      .hosts {
+        display: grid;
+        gap: 14px;
+        align-items: center;
+        justify-content: start;
+      }
+      .brand {
+        display: inline-flex;
+        gap: 10px;
+        align-items: center;
+        background: #fff;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 10px 14px;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.03);
+      }
+      .brand .emoji {
+        color: var(--accent);
+        font-size: 18px;
+      }
+      .brand .name {
+        font-weight: 800;
+        letter-spacing: 0.2px;
+      }
+      .brand img {
+        height: 22px;
+      }
+      section { margin-top: 34px; }
+      section h2 { margin: 0 0 14px; font-size: 28px; }
+      .schedule-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 18px;
+      }
+      .schedule-item {
+        background: var(--card);
+        border: 1px solid var(--border);
+        border-radius: var(--radius);
+        padding: 14px;
+      }
+      .schedule-item .day { font-weight: 700; margin-bottom: 6px; }
+      .organizers-grid {
+        display: grid;
+        grid-template-columns: repeat(6, minmax(110px, 1fr));
+        gap: 16px 16px;
+      }
+      .organizer {
+        display: grid;
+        gap: 8px;
+        justify-items: center;
+      }
+      .avatar {
+        width: 92px;
+        height: 92px;
+        border-radius: 14px;
+        background: var(--card);
+        border: 1px solid var(--border);
+      }
+      .links-list { display: grid; gap: 10px; }
+      .links-list a { color: var(--primary); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+      .muted { color: var(--muted); }
+      footer { margin-top: 48px; color: var(--muted); font-size: 14px; }
+      @media (max-width: 980px) {
+        .hero { grid-template-columns: 1fr; }
+        .schedule-grid { grid-template-columns: repeat(2, 1fr); }
+        .organizers-grid { grid-template-columns: repeat(3, 1fr); }
+      }
+      @media (max-width: 560px) {
+        .schedule-grid { grid-template-columns: 1fr; }
+        .organizers-grid { grid-template-columns: repeat(2, 1fr); }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>Frontiers in Language Model Systems & Algorithms</h1>
+      </header>
+
+      <div class="hero">
+        <div class="desc card">
+          <p>
+            A focused, week-long bootcamp on building and scaling frontier LLM
+            systems. Each day blends fast, practical lectures with hands-on
+            labs. By the end of the week, participants will have shipped
+            production-grade components and understand state-of-the-art
+            techniques for inference, training, evaluation, and systems.
+          </p>
+          <p class="muted" style="margin-top:12px;">
+            Tentative dates: <strong>Coming Soon</strong> • Location: <strong>Bay Area</strong>
+          </p>
+        </div>
+
+        <aside class="hosted-by">
+          <h3>Hosted by</h3>
+          <div class="hosts">
+            <div class="brand"><span class="emoji">⚡</span><span class="name">GPU MODE</span></div>
+            <div class="brand">X</div>
+            <div class="brand">
+              <img src="/logo.png" alt="Scale ML logo" />
+              <span class="name">Scale ML</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <section aria-labelledby="schedule">
+        <h2 id="schedule">Schedule</h2>
+        <div class="schedule-grid" role="list">
+          <div class="schedule-item" role="listitem">
+            <div class="day">Day 1 · Systems 101</div>
+            <div class="muted">Foundations, tooling, and modern LLM stack</div>
+          </div>
+          <div class="schedule-item" role="listitem">
+            <div class="day">Day 2 · Training</div>
+            <div class="muted">Data, scaling laws, optimization, and MoE</div>
+          </div>
+          <div class="schedule-item" role="listitem">
+            <div class="day">Day 3 · Inference</div>
+            <div class="muted">Throughput, KV-caching, speculative decoding</div>
+          </div>
+          <div class="schedule-item" role="listitem">
+            <div class="day">Day 4 · Evaluation</div>
+            <div class="muted">Benchmarks, LLM-as-judge, and reliability</div>
+          </div>
+          <div class="schedule-item" role="listitem">
+            <div class="day">Day 5 · Production</div>
+            <div class="muted">Serving, observability, and safety</div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="organizers">
+        <h2 id="organizers">Organizers</h2>
+        <div class="organizers-grid">
+          <div class="organizer">
+            <div class="avatar" aria-hidden="true"></div>
+            <div class="muted">Name</div>
+          </div>
+          <div class="organizer">
+            <div class="avatar" aria-hidden="true"></div>
+            <div class="muted">Name</div>
+          </div>
+          <div class="organizer">
+            <div class="avatar" aria-hidden="true"></div>
+            <div class="muted">Name</div>
+          </div>
+          <div class="organizer">
+            <div class="avatar" aria-hidden="true"></div>
+            <div class="muted">Name</div>
+          </div>
+          <div class="organizer">
+            <div class="avatar" aria-hidden="true"></div>
+            <div class="muted">Name</div>
+          </div>
+          <div class="organizer">
+            <div class="avatar" aria-hidden="true"></div>
+            <div class="muted">Name</div>
+          </div>
+        </div>
+      </section>
+
+      <section aria-labelledby="links">
+        <h2 id="links">Links to Talks</h2>
+        <div class="links-list">
+          <a href="#" target="_blank" rel="noopener">Talk 1 — Title</a>
+          <a href="#" target="_blank" rel="noopener">Talk 2 — Title</a>
+          <a href="#" target="_blank" rel="noopener">Talk 3 — Title</a>
+          <a href="#" target="_blank" rel="noopener">Talk 4 — Title</a>
+          <a href="#" target="_blank" rel="noopener">Talk 5 — Title</a>
+        </div>
+      </section>
+
+      <footer>
+        © <span id="year"></span> GPU MODE × Scale ML · All rights reserved
+      </footer>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </body>
+  </html>
+
+
