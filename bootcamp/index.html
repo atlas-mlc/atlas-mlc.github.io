@@ -82,11 +82,13 @@
       .brand img {
         height: 22px;
       }
-      .banner-img { width: 100%; height: auto; display: block; border-radius: 10px; }
+      .banner-img { width: 15%; height: auto; display: block; border-radius: 10px; margin: 0 auto 12px auto; }
       .speaker-card { text-align: center; }
-      .speaker-photo { width: 100%; height: auto; display: block; border-radius: 10px; }
+      .speaker-photo { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border-radius: 10px; }
       .speaker-name { font-weight: 700; margin-top: 6px; }
       .speaker-affil { font-size: 14px; }
+      .speaker-meta { margin-top: 4px; }
+      .speaker-meta div { font-size: 14px; line-height: 1.3; }
       section { margin-top: 34px; }
       section h2 { margin: 0 0 14px; font-size: 28px; }
       .schedule-grid {
@@ -112,8 +114,8 @@
         justify-items: center;
       }
       .avatar {
-        width: 92px;
-        height: 92px;
+        width: 200px;
+        height: 200px;
         border-radius: 14px;
         background: var(--card);
         border: 1px solid var(--border);
@@ -156,34 +158,64 @@
         <h2 id="schedule">Speakers</h2>
         <div class="schedule-grid" role="list">
           <div class="schedule-item speaker-card" role="listitem">
-            <img class="speaker-photo" src="/bootcamp/Sewon Min.jpg" alt="Sewon Min" />
-            <div class="speaker-name">Sewon Min</div>
+            <img class="speaker-photo" src="/bootcamp/Sewon Min.jpg" alt="Prof Sewon Min" />
+            <div class="speaker-name">Prof Sewon Min</div>
             <div class="muted speaker-affil">UC Berkeley</div>
+            <div class="speaker-meta">
+              <div><strong>Monday, Aug 25</strong></div>
+              <div><strong>1:15 EST / 10:15 PT</strong></div>
+              <div><strong>Topic:</strong> Overview of Talks, Mixture of Experts</div>
+            </div>
           </div>
           <div class="schedule-item speaker-card" role="listitem">
             <img class="speaker-photo" src="/bootcamp/Guangxuan.jpg" alt="Guangxuan Xiao" />
             <div class="speaker-name">Guangxuan Xiao</div>
             <div class="muted speaker-affil">MIT</div>
+            <div class="speaker-meta">
+              <div><strong>Tuesday, Aug 26</strong></div>
+              <div><strong>1:15 EST / 10:15 PT</strong></div>
+              <div><strong>Topic:</strong> Attention Sinks</div>
+            </div>
           </div>
           <div class="schedule-item speaker-card" role="listitem">
-            <img class="speaker-photo" src="/bootcamp/chris.jpg" alt="Chris De Sa" />
-            <div class="speaker-name">Chris De Sa</div>
+            <img class="speaker-photo" src="/bootcamp/chris.jpg" alt="Prof Chris De Sa" />
+            <div class="speaker-name">Prof Chris De Sa</div>
             <div class="muted speaker-affil">Cornell</div>
+            <div class="speaker-meta">
+              <div><strong>Wednesday, Aug 27</strong></div>
+              <div><strong>1:15 EST / 10:15 PT</strong></div>
+              <div><strong>Topic:</strong> Quantization for training / inference</div>
+            </div>
           </div>
           <div class="schedule-item speaker-card" role="listitem">
             <img class="speaker-photo" src="/bootcamp/songlin.jpeg" alt="Songlin Yang" />
             <div class="speaker-name">Songlin Yang</div>
             <div class="muted speaker-affil">MIT</div>
+            <div class="speaker-meta">
+              <div><strong>Thursday, Aug 28</strong></div>
+              <div><strong>1:15 EST / 10:15 PT</strong></div>
+              <div><strong>Topic:</strong> Positional Encodings, PaTH Attention</div>
+            </div>
           </div>
           <div class="schedule-item speaker-card" role="listitem">
             <img class="speaker-photo" src="/bootcamp/Simran.jpg" alt="Simran Arora" />
             <div class="speaker-name">Simran Arora</div>
             <div class="muted speaker-affil">Stanford</div>
+            <div class="speaker-meta">
+              <div><strong>Friday, Aug 29</strong></div>
+              <div><strong>1:15 EST / 10:15 PT</strong></div>
+              <div><strong>Topic:</strong> GPU programming for fronteir models</div>
+            </div>
           </div>
           <div class="schedule-item speaker-card" role="listitem">
             <img class="speaker-photo" src="/bootcamp/william.jpeg" alt="William Brandon" />
             <div class="speaker-name">William Brandon</div>
             <div class="muted speaker-affil">Anthropic</div>
+            <div class="speaker-meta">
+              <div><strong>Bonus</strong></div>
+              <div><strong>1:15 EST / 10:15 PT</strong></div>
+              <div><strong>Topic:</strong> TBA</div>
+            </div>
           </div>
         </div>
       </section>
