@@ -37,7 +37,7 @@
       }
       .hero {
         display: grid;
-        grid-template-columns: 1.2fr 0.8fr;
+        grid-template-columns: 1fr;
         gap: 28px;
         align-items: start;
       }
@@ -82,11 +82,16 @@
       .brand img {
         height: 22px;
       }
+      .banner-img { width: 100%; height: auto; display: block; border-radius: 10px; }
+      .speaker-card { text-align: center; }
+      .speaker-photo { width: 100%; height: auto; display: block; border-radius: 10px; }
+      .speaker-name { font-weight: 700; margin-top: 6px; }
+      .speaker-affil { font-size: 14px; }
       section { margin-top: 34px; }
       section h2 { margin: 0 0 14px; font-size: 28px; }
       .schedule-grid {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 18px;
       }
       .schedule-item {
@@ -98,7 +103,7 @@
       .schedule-item .day { font-weight: 700; margin-bottom: 6px; }
       .organizers-grid {
         display: grid;
-        grid-template-columns: repeat(6, minmax(110px, 1fr));
+        grid-template-columns: repeat(4, minmax(110px, 1fr));
         gap: 16px 16px;
       }
       .organizer {
@@ -112,6 +117,7 @@
         border-radius: 14px;
         background: var(--card);
         border: 1px solid var(--border);
+        object-fit: cover;
       }
       .links-list { display: grid; gap: 10px; }
       .links-list a { color: var(--primary); text-decoration: none; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
@@ -136,53 +142,48 @@
 
       <div class="hero">
         <div class="desc card">
+          <img src="/bootcamp/host.jpeg" alt="GPU MODE × Scale ML" class="banner-img" />
           <p>
-            A focused, week-long bootcamp on building and scaling frontier LLM
-            systems. Each day blends fast, practical lectures with hands-on
-            labs. By the end of the week, participants will have shipped
-            production-grade components and understand state-of-the-art
-            techniques for inference, training, evaluation, and systems.
+            The <a href="https://github.com/gpu-mode" target="_blank" rel="noopener">GPU MODE</a> × <a href="https://scale-ml.org" target="_blank" rel="noopener">Scale ML</a> speaker series is a 5-day, online event where top researchers in AI will talk about various architectural and system-level advances that are integrated into OpenAI’s frontier open-source model, GPT-OSS. We will livestream and record these talks for free, online, and without registration on the GPU MODE YouTube channel, where viewers can ask questions to the speakers live.
           </p>
-          <p class="muted" style="margin-top:12px;">
-            Tentative dates: <strong>Coming Soon</strong> • Location: <strong>Bay Area</strong>
+          <p style="margin-top:12px;">
+            Each day will consist of 2 hours of talks and discussions (around noon PST), covering a different component of the evolving transformer stack—from quirks in the attention mechanism and positional encodings to quantization, MoEs, and custom GPU kernels. All talks will be recorded to the YouTube channel as well.
           </p>
         </div>
-
-        <aside class="hosted-by">
-          <h3>Hosted by</h3>
-          <div class="hosts">
-            <div class="brand"><span class="emoji">⚡</span><span class="name">GPU MODE</span></div>
-            <div class="brand">X</div>
-            <div class="brand">
-              <img src="/logo.png" alt="Scale ML logo" />
-              <span class="name">Scale ML</span>
-            </div>
-          </div>
-        </aside>
       </div>
 
       <section aria-labelledby="schedule">
-        <h2 id="schedule">Schedule</h2>
+        <h2 id="schedule">Speakers</h2>
         <div class="schedule-grid" role="list">
-          <div class="schedule-item" role="listitem">
-            <div class="day">Day 1 · Systems 101</div>
-            <div class="muted">Foundations, tooling, and modern LLM stack</div>
+          <div class="schedule-item speaker-card" role="listitem">
+            <img class="speaker-photo" src="/bootcamp/Sewon Min.jpg" alt="Sewon Min" />
+            <div class="speaker-name">Sewon Min</div>
+            <div class="muted speaker-affil">UC Berkeley</div>
           </div>
-          <div class="schedule-item" role="listitem">
-            <div class="day">Day 2 · Training</div>
-            <div class="muted">Data, scaling laws, optimization, and MoE</div>
+          <div class="schedule-item speaker-card" role="listitem">
+            <img class="speaker-photo" src="/bootcamp/Guangxuan.jpg" alt="Guangxuan Xiao" />
+            <div class="speaker-name">Guangxuan Xiao</div>
+            <div class="muted speaker-affil">MIT</div>
           </div>
-          <div class="schedule-item" role="listitem">
-            <div class="day">Day 3 · Inference</div>
-            <div class="muted">Throughput, KV-caching, speculative decoding</div>
+          <div class="schedule-item speaker-card" role="listitem">
+            <img class="speaker-photo" src="/bootcamp/chris.jpg" alt="Chris De Sa" />
+            <div class="speaker-name">Chris De Sa</div>
+            <div class="muted speaker-affil">Cornell</div>
           </div>
-          <div class="schedule-item" role="listitem">
-            <div class="day">Day 4 · Evaluation</div>
-            <div class="muted">Benchmarks, LLM-as-judge, and reliability</div>
+          <div class="schedule-item speaker-card" role="listitem">
+            <img class="speaker-photo" src="/bootcamp/songlin.jpeg" alt="Songlin Yang" />
+            <div class="speaker-name">Songlin Yang</div>
+            <div class="muted speaker-affil">MIT</div>
           </div>
-          <div class="schedule-item" role="listitem">
-            <div class="day">Day 5 · Production</div>
-            <div class="muted">Serving, observability, and safety</div>
+          <div class="schedule-item speaker-card" role="listitem">
+            <img class="speaker-photo" src="/bootcamp/Simran.jpg" alt="Simran Arora" />
+            <div class="speaker-name">Simran Arora</div>
+            <div class="muted speaker-affil">Stanford</div>
+          </div>
+          <div class="schedule-item speaker-card" role="listitem">
+            <img class="speaker-photo" src="/bootcamp/william.jpeg" alt="William Brandon" />
+            <div class="speaker-name">William Brandon</div>
+            <div class="muted speaker-affil">Anthropic</div>
           </div>
         </div>
       </section>
@@ -191,28 +192,20 @@
         <h2 id="organizers">Organizers</h2>
         <div class="organizers-grid">
           <div class="organizer">
-            <div class="avatar" aria-hidden="true"></div>
-            <div class="muted">Name</div>
+            <img class="avatar" src="/bootcamp/jyo.jpeg" alt="Jyo Pari" />
+            <div class="muted">Jyo Pari</div>
           </div>
           <div class="organizer">
-            <div class="avatar" aria-hidden="true"></div>
-            <div class="muted">Name</div>
+            <img class="avatar" src="/bootcamp/hanguo.jpeg" alt="Han Guo" />
+            <div class="muted">Han Guo</div>
           </div>
           <div class="organizer">
-            <div class="avatar" aria-hidden="true"></div>
-            <div class="muted">Name</div>
+            <img class="avatar" src="/bootcamp/alexzhang_portrait.png" alt="Alex Zhang" />
+            <div class="muted">Alex Zhang</div>
           </div>
           <div class="organizer">
-            <div class="avatar" aria-hidden="true"></div>
-            <div class="muted">Name</div>
-          </div>
-          <div class="organizer">
-            <div class="avatar" aria-hidden="true"></div>
-            <div class="muted">Name</div>
-          </div>
-          <div class="organizer">
-            <div class="avatar" aria-hidden="true"></div>
-            <div class="muted">Name</div>
+            <img class="avatar" src="/bootcamp/songlin.jpeg" alt="Songlin Yang" />
+            <div class="muted">Songlin Yang</div>
           </div>
         </div>
       </section>
