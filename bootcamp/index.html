@@ -82,7 +82,7 @@
       .brand img {
         height: 22px;
       }
-      .banner-img { width: 30%; height: auto; display: block; border-radius: 10px; margin: 0 0 12px 0; }
+      .banner-img { width: 100%; max-width: 680px; height: auto; display: block; border-radius: 10px; margin: 0 0 12px 0; }
       .speaker-card { text-align: center; }
       .speaker-photo { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; display: block; border-radius: 10px; }
       .speaker-name { font-weight: 700; margin-top: 6px; }
@@ -136,6 +136,9 @@
         .schedule-grid { grid-template-columns: 1fr; }
         .organizers-grid { grid-template-columns: repeat(2, 1fr); }
       }
+      @media (min-width: 981px) {
+        .banner-img { width: 30%; max-width: none; }
+      }
     </style>
   </head>
   <body>
@@ -178,7 +181,7 @@
             <div class="muted speaker-affil">MIT</div>
             <div class="speaker-meta">
               <div><strong>Tuesday, Aug 26</strong></div>
-              <div><strong>1:15 EST / 10:15 PT</strong></div>
+              <div><strong>2:00 EST / 11:00 PT</strong></div>
               <div><strong>Topic:</strong> Attention Sinks</div>
             </div>
           </div>
@@ -188,7 +191,7 @@
             <div class="muted speaker-affil">Cornell</div>
             <div class="speaker-meta">
               <div><strong>Wednesday, Aug 27</strong></div>
-              <div><strong>1:15 EST / 10:15 PT</strong></div>
+              <div><strong>3:00 EST / 12:00 PT</strong></div>
               <div><strong>Topic:</strong> Quantization for training / inference</div>
             </div>
           </div>
@@ -198,7 +201,7 @@
             <div class="muted speaker-affil">MIT</div>
             <div class="speaker-meta">
               <div><strong>Thursday, Aug 28</strong></div>
-              <div><strong>1:15 EST / 10:15 PT</strong></div>
+              <div><strong>2:00 EST / 11:00 PT</strong></div>
               <div><strong>Topic:</strong> Positional Encodings, PaTH Attention</div>
             </div>
           </div>
@@ -208,7 +211,7 @@
             <div class="muted speaker-affil">Stanford</div>
             <div class="speaker-meta">
               <div><strong>Friday, Aug 29</strong></div>
-              <div><strong>1:15 EST / 10:15 PT</strong></div>
+              <div><strong>2:00 EST / 11:00 PT</strong></div>
               <div><strong>Topic:</strong> GPU programming for fronteir models</div>
             </div>
           </div>
